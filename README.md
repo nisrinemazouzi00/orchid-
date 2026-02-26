@@ -78,19 +78,11 @@ final-exam-project/
 
 ## 🛠️ Tech Stack
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- Bcryptjs
-- JSON Web Token (JWT)
-- CORS
-
-### Frontend
-- HTML5
-- CSS3
-- JavaScript (ES6)
+| Backend         | Frontend        | Database           | Security          |
+|-----------------|-----------------|--------------------|-------------------|
+| Node.js         | HTML5           | MongoDB Atlas      | bcrypt            |
+| Express.js      | CSS3            | Mongoose           | JWT               |
+| REST API        | JavaScript (ES6)| Cloud DB           | CORS              |
 
 ---
 
