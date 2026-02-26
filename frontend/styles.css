@@ -1,0 +1,458 @@
+r/* Common styles */
+body {
+  font-family: "Quicksand", Arial, sans-serif; /* Use Quicksand as primary font */
+  margin: 0;
+  background: url("bg.jpg") center center/cover no-repeat;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 70px;
+  color: #1a9d71;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 50px 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: none;
+  background-color: #c5b9aaa4;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #1a9d71;
+  color: white;
+}
+
+button:hover {
+  background: #5f817b;
+  color: #ffffff;
+}
+
+/* Reset and common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #0f573f;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 15px;
+}
+
+.btn-primary {
+  border: 1px solid #fff;
+}
+
+.btn-secondary,
+.btn-third:hover {
+  background: #5f817b;
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-third {
+  background: #18915b;
+}
+
+.primary-text {
+  color: #217d40;
+}
+
+/* Header styles */
+header {
+  height: 100vh;
+  background: url("bg.jpg") center center/cover no-repeat;
+  position: relative;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+#navbar img {
+  width: 100px;
+  margin-left: 100px;
+}
+
+nav ul {
+  display: flex;
+  margin-right: 100px;
+}
+
+nav ul li a {
+  padding: 15px 20px;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #37794d;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+header .content {
+  display: flex;
+  justify-content: center;
+  height: 75%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.208);
+}
+
+header .content h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
+header .content p {
+  color: #ffffff;
+  margin: 20px 0 40px;
+}
+
+header * {
+  z-index: 10;
+}
+
+/* About styles */
+#about {
+  background: #f4f4f4;
+  padding: 4rem 0;
+}
+
+#about .title,
+#special .title,
+#catalogue .title {
+  text-align: center;
+}
+
+#about h2,
+#special h2,
+#catalogue h2 {
+  font-size: 40px;
+  padding: 20px 200px;
+  background: url("bg.jpg") center center/cover no-repeat;
+  color: #383848;
+}
+
+#about .title p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9a9a;
+  margin-bottom: 2rem;
+}
+
+#about .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#about .about-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+#moreAboutInfo {
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #9a9a9a;
+}
+
+#moreAboutInfo p {
+  line-height: 1.6;
+}
+
+/* Special Section styles */
+#special {
+  height: 65vh;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+}
+
+#special h2 {
+  color: #383848;
+  background: url("bg.jpg") center center/cover no-repeat;
+}
+
+#special .special-items {
+  display: flex;
+  text-align: center;
+}
+
+#special .special-items h3 {
+  font-size: 25px;
+  color: #0f573f;
+  margin: 15px 0;
+}
+
+#special .special-items p {
+  color: #0f573f;
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+#special .special-items img {
+  width: 200px;
+  transition: transform 0.1s ease-in-out;
+}
+
+#special .special-items img:hover {
+  transform: scale(1.1);
+}
+
+/* Catalogue Section styles */
+.catalogue {
+  margin: 2rem 0;
+}
+
+.catalogue-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.catalogue-head {
+  background: #96eca42c;
+  text-align: center;
+}
+
+.catalogue-head q {
+  color: #1A8B9D;
+  font-style: italic;
+  font-size: 2.6rem;
+}
+
+.catalogue-head p {
+  font-weight: 3000;
+  padding: 1.8rem 0;
+  color: #56361e;
+  font-style: italic;
+}
+
+.catalogue-btns {
+  padding: 2.6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.catalogue-btn {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  color: #166022;
+  display: block;
+  margin: 0 1rem;
+}
+
+.catalogue-btn::after {
+  content: "";
+  display: block;
+  height: 7px;
+  background: #166022;
+  margin-top: 0.5rem;
+  width: 0;
+  transition: width 0.4s ease-out;
+}
+
+.catalogue-btn:hover::after {
+  width: 60%;
+}
+
+.active-btn {
+  color: #1A8B9D;
+}
+
+.tea-items {
+  margin: 2rem 0;
+}
+
+.tea-item {
+  color: #000000;
+  margin: 0.6rem 0;
+}
+
+.tea-content {
+  padding: 1rem;
+}
+
+.tea-name {
+  color: #4F6F52;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.line {
+  width: 100px;
+  height: 3px;
+  background: #4F6F52;
+}
+
+.tea-price {
+  padding: 0.4rem 0;
+  font-size: 1.4rem;
+}
+
+.category {
+  padding-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.category span {
+  font-weight: 500;
+}
+
+.tea-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+}
+
+.tea-items img {
+  max-width: 40%;
+}
+
+/* Contact Section styles */
+#contact {
+  background: url(pexels-eva-bronzini-6585039.jpg) center center/cover no-repeat;
+  padding: 8rem 0;
+}
+
+#contact .container {
+  max-width: 900px;
+}
+
+#contact .contact-content {
+  display: flex;
+}
+
+#contact .contact-info {
+  width: 50%;
+}
+
+#contact .contact-info div {
+  margin: 30px 0;
+  line-height: 1.7;
+}
+
+#contact .contact-info h3 {
+  font-size: 28px;
+  color: #089a6c;
+  margin-bottom: 10px;
+}
+ /* Footer Start */
+  /* Set background color, text alignment, and text color for the footer */
+  #footer {
+    background-color: #3838486e;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  /* Footer End */
+  
+
+form {
+  width: 50%;
+   
+}
+
+form input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: none;
+  background-color: #c5b9aaa4;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+
+}
+
+form button {
+  color: #000000;
+}
+
+
+
+
+
+
+  
+      
+
+
+  
