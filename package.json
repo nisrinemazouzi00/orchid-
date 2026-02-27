@@ -1,7 +1,7 @@
 {
-  "name": "final-exam-project",
+  "name": "orchid-tea-shop",
   "version": "1.0.0",
-  "description": "Final Exam Project",
+  "description": "ORCHID Tea Shop - Full Stack Web Application",
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
