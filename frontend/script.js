@@ -1,11 +1,18 @@
 // Dynamic API URL - works for both local and production
-const API_URL = window.location.hostname === 'localhost' 
-  ? 'http://localhost:3001' 
+// For GitHub Pages (static), use empty string - login/register will show demo message
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3001'
   : '';
 
 // Function to log in for an existing user
 
 async function login() {
+  // Check if API is available
+  if (!API_URL) {
+    alert('Demo Mode: Login functionality requires backend deployment.\n\nTo enable full features, deploy backend to Render.com');
+    return;
+  }
+
 //1.Retrieving Input Values
   const username = document.getElementById('login-username').value;
   const password = document.getElementById('login-password').value;
@@ -27,9 +34,17 @@ async function login() {
   } else {
     alert(data.message); 
   }
-}// Function to register a new user
+}
+
+// Function to register a new user
 
 async function register() {
+  // Check if API is available
+  if (!API_URL) {
+    alert('Demo Mode: Registration functionality requires backend deployment.\n\nTo enable full features, deploy backend to Render.com');
+    return;
+  }
+
   //1. Retrieving Input Values:
   const username = document.getElementById('reg-username').value;
   const password = document.getElementById('reg-password').value;
