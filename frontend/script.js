@@ -1,3 +1,8 @@
+// Dynamic API URL - works for both local and production
+const API_URL = window.location.hostname === 'localhost' 
+  ? 'http://localhost:3001' 
+  : '';
+
 // Function to log in for an existing user
 
 async function login() {
@@ -5,7 +10,7 @@ async function login() {
   const username = document.getElementById('login-username').value;
   const password = document.getElementById('login-password').value;
 //2. Sending Login Request
-  const response = await fetch('http://localhost:3001/login', {
+  const response = await fetch(`${API_URL}/login`, {
    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -29,7 +34,7 @@ async function register() {
   const username = document.getElementById('reg-username').value;
   const password = document.getElementById('reg-password').value;
   //2. Sending Registration Request:
-  const response = await fetch('http://localhost:3001/register', {
+  const response = await fetch(`${API_URL}/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

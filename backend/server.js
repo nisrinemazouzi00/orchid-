@@ -3,16 +3,21 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs'); 
 const jwt = require('jsonwebtoken'); 
 const cors = require('cors'); 
+const path = require('path');
 
 //creat express and set the port
 const app = express(); 
-const PORT = process.PORT || 3001; 
-const SECRET_KEY = 'hazime';
+const PORT = process.env.PORT || 3001; 
+const SECRET_KEY = process.env.JWT_SECRET || 'hazime';
 
 // Middleware setup
 app.use(express.json()); 
 app.use(cors());
-// MongoDB connection 
+
+// Serve static files from frontend directory
+app.use(express.static(path.join(__dirname, 'frontend')));
+
+// MongoDB connection
 const MONGO_URI = 'mongodb+srv://nisrine:hazime1234@final-exam-project.keoflyq.mongodb.net/?retryWrites=true&w=majority&appName=final-exam-project';
 //method is used to connect to the MongoDB instance.
 mongoose.connect(MONGO_URI, {
@@ -115,6 +120,11 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
+
+// Catch-all route for frontend (must be last)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+});
 
 // Starts the server
 app.listen(PORT, () => {
